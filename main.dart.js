@@ -69136,33 +69136,16 @@ A.E("TEST ERROR")
 A.E(l)
 p=J.e9(l)
 A.E(A.d8(p.gcr(l).a,null))
-case 3:s=10
-return A.C(p.i(l),$async$$0)
-case 10:switch(b){case u.r:s=5
-break
-case u.U:s=6
-break
-case u.z:s=7
-break
-case u.B:s=8
-break
-default:s=9
-break}break
-case 5:A.E("ERORR ZERO")
+switch(p.i(l)){case u.r:A.E("ERORR ZERO")
 o="Please input all data"
-s=4
 break
-case 6:o="Email is not valid"
-s=4
+case u.U:o="Email is not valid"
 break
-case 7:o="Email is already registered"
-s=4
+case u.z:o="Email is already registered"
 break
-case 8:o="Password at least 6 characters"
-s=4
+case u.B:o="Password at least 6 characters"
 break
-case 9:o="Error Sign Up, please try again"
-case 4:n=t.p
+default:o="Error Sign Up, please try again, aaaaaaa"}n=t.p
 if(A.d8(p.gcr(l).a,null)!=="User"){A.E("BUKANNN USERRR")
 A.E(A.d8(p.gcr(l).a,null))
 A.E("AAAAAAaa")
