@@ -69161,7 +69161,7 @@ break
 case 8:o="Password at least 6 characters"
 s=4
 break
-case 9:o="Error Sign Up"
+case 9:o="Error Sign Up, please try again"
 case 4:n=t.p
 if(A.d8(p.gcr(l).a,null)!=="User"){A.E("BUKANNN USERRR")
 A.E(A.d8(p.gcr(l).a,null))
