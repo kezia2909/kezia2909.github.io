@@ -69170,7 +69170,7 @@ p=A.bg(A.b([A.bC(B.b8,A.z("white"),null),B.a7,A.aq(o,null,null,null,null,null,nu
 m.Q=A.ci(null,null,A.z("red"),null,p,B.F,B.J,null,null,null,null,null,null,null)}else{A.E("BETULLLL USERRR")
 A.E(A.d8(p.gcr(l).a,null))
 A.E("AAAAAAaa")
-p=A.bg(A.b([A.bC(B.b7,A.z("white"),null),B.a7,A.aq("Signed in successfully",null,null,null,null,null,null)],n),B.o,B.p,B.l)
+p=A.bg(A.b([A.bC(B.b7,A.z("white"),null),B.a7,A.aq("Signed up successfully",null,null,null,null,null,null)],n),B.o,B.p,B.l)
 m.Q=A.ci(null,null,A.z("shadow"),null,p,B.F,B.J,null,null,null,null,null,null,null)}p=q.b
 A.bJ(p,!1).cL(0,null)
 p=p.t(t.d)
