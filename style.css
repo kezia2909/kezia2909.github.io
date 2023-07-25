@@ -112,7 +112,7 @@ body{
 }
 
 
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 991px) {
     .title{
         font-size: 80px;
         color: var(--white-color);
@@ -129,11 +129,6 @@ body{
         font-size: 20px;
         color: var(--white-color);
         font-weight: 200;
-    }
-
-    .btn-primary{
-        font-size: 20px;
-        font-weight: bold;
     }
 
     .skill{
@@ -181,3 +176,134 @@ body{
     }
 }
 
+@media screen and (max-width: 990px) {
+    .title{
+        font-size: 50px;
+        color: var(--white-color);
+        font-weight: 700;
+    }
+    
+    .subTitle{
+        font-size: 28px;
+        color: var(--accent-color);
+        font-weight: 900;
+    }
+
+    .description{
+        font-size: 15px;
+        color: var(--white-color);
+        font-weight: 200;
+    }
+
+    .skill{
+        font-size: 15px;
+        border-radius: 5px;
+        padding: 8px 15px;
+        margin: 8px 8px;
+    }
+
+    .head_projects{
+        font-size: 40px;
+        font-weight: 900;
+    }
+
+    .head_projects[aria-expanded=true] .icon_collapsed{
+        display: none;
+    }
+    .head_projects[aria-expanded=false] .icon_expanded{
+        display: none;
+    }
+
+    .title_project{
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .description_project{
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .head_detail{
+        margin-top: 10px;
+    }
+
+    .detail_project{
+        font-size: 12px;
+        font-weight: 500;
+        text-align: right;
+    }
+
+    .multi-collapse .row .col{
+        margin: 10px;
+        padding: 10px 20px;       
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .title{
+        font-size: 40px;
+        color: var(--white-color);
+        font-weight: 700;
+    }
+    
+    .subTitle{
+        font-size: 22px;
+        color: var(--accent-color);
+        font-weight: 900;
+    }
+
+    .description{
+        font-size: 15px;
+        color: var(--white-color);
+        font-weight: 200;
+    }
+
+    .skill{
+        font-size: 15px;
+        border-radius: 5px;
+        padding: 8px 15px;
+        margin: 8px 8px;
+    }
+
+    #list_projects{
+        margin: 10px 5px;
+    }
+
+    .head_projects{
+        font-size: 25px;
+        font-weight: 900;
+    }
+
+    .head_projects[aria-expanded=true] .icon_collapsed{
+        display: none;
+    }
+    .head_projects[aria-expanded=false] .icon_expanded{
+        display: none;
+    }
+
+    .title_project{
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .description_project{
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    /* .head_detail{
+        margin-top: 10px;
+    } */
+
+    .detail_project{
+        font-size: 10px;
+        font-weight: 500;
+        text-align: right;
+    }
+
+    .multi-collapse .row .col{
+        margin: 10px;
+        padding: 10px 20px;       
+    }
+}
