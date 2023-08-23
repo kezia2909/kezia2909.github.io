@@ -32,10 +32,10 @@ body{
     text-decoration-line:underline;
 }
 
-.container{
+/* .container{
     padding-top: 10vh;
     padding-bottom: 10vh;
-}
+} */
 
 .btn-primary{
     background-color: var(--accent-color);
@@ -133,6 +133,27 @@ body{
     display: none;
 }
 
+#aboutMe{
+    padding-top: 15vh;
+}
+
+#projects{
+    padding-top: 15vh;
+}
+
+#contacts{
+    padding-top: 40vh;
+    padding-bottom: 40vh;
+}
+
+.fa-external-link{
+    color: var(--white-color);
+}
+
+.fa-external-link:hover{
+    color: var(--accent-color);
+}
+
 @media screen and (min-width: 991px) {
     .title{
         font-size: 80px;
@@ -195,6 +216,8 @@ body{
         margin: 10px;
         padding: 10px 20px;       
     }
+
+   
 }
 
 @media screen and (max-width: 990px) {
@@ -205,7 +228,7 @@ body{
     }
     
     .subTitle{
-        font-size: 28px;
+        font-size: 35px;
         color: var(--accent-color);
         font-weight: 900;
     }
@@ -259,6 +282,8 @@ body{
         margin: 10px;
         padding: 10px 20px;       
     }
+
+
 }
 
 @media screen and (max-width: 767px) {
@@ -327,4 +352,6 @@ body{
         margin: 10px;
         padding: 10px 20px;       
     }
+
+    
 }

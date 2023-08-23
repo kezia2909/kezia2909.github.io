@@ -28,20 +28,7 @@
         </div>
     </nav>
 
-    <script>
-        // Get all the nav links
-        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-    
-        // Add click event listeners to each nav link
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                // Remove "active" class from all nav links
-                navLinks.forEach(navLink => navLink.classList.remove('active'));
-                // Add "active" class to the clicked nav link
-                link.classList.add('active');
-            });
-        });
-    </script>
+
 
 <!-- ABOUT ME -->
     <div class="container" id="aboutMe">
@@ -133,7 +120,9 @@
                                 <div class="row">
                                     <!-- find my color -->
                                     <div class="col col-11 col-md-12 col-lg-5 ">
-                                        <p class="title_project">Find My Color</p>
+                                        <p class="title_project">
+                                            Find My Color <a href="./projects/flutter/find_my_color/try_it/index.html" target=”_blank” ><i class="fa fa-external-link"></i></a>
+                                        </p>
                                         <p class="description_project">
                                             Application to reccomend lipstick color match to skin with K-Means method for segmentation face
                                         </p>
@@ -770,6 +759,26 @@
         </div>
     </div>
 
+    <script>
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    
+        function updateActiveNavLink() {
+            const scrollPosition = window.scrollY;
+            
+            navLinks.forEach(link => {
+                const target = document.querySelector(link.getAttribute('href'));
+                
+                if (target.offsetTop <= scrollPosition && target.offsetTop + target.offsetHeight > scrollPosition) {
+                    navLinks.forEach(navLink => navLink.classList.remove('active'));
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNavLink);
+    </script>
     
 </body>
 </html>
