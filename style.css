@@ -146,13 +146,24 @@ body{
     padding-bottom: 40vh;
 }
 
-.fa-external-link{
+.icon_projects{
     color: var(--white-color);
 }
-
-.fa-external-link:hover{
-    color: var(--accent-color);
+.icon_projects:hover{
+    color: var(--light-color);
 }
+
+.icon_contacts i{
+    color: var(--light-color);
+}
+.icon_contacts:hover i{
+    color: var(--white-color);
+}
+.icon_contacts:hover{
+    color: var(--white-color);
+    background-color: var(--light-color);
+}
+
 
 @media screen and (min-width: 991px) {
     .title{
