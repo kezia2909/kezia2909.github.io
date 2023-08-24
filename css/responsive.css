@@ -72,6 +72,12 @@
 	.about-img {
 		margin-right:15px;
 	}
+	.social-icons li a {
+		width:75px;
+		height:75px;
+		line-height:75px;
+		font-size:35px;
+	}
 }
 @media only screen and (max-width: 1199px) {
 	#fp-nav.fp-right {
@@ -118,16 +124,6 @@
 	}
 	.owl-carousel .owl-dots {
 		margin-top:35px;
-	}
-	.social-icons li a {
-	  width:25px;
-	  height:30px;
-	  display:inline-block;
-	  line-height:30px;
-	  text-align:center;
-	  background: rgba(255, 255, 255, 0.1);
-	  color: rgba(255,255,255,1);
-	  font-size:14px;
 	}
 	.menu-trigger {
 		margin:0;
@@ -196,6 +192,34 @@
 	.contact-row {
 		padding: 42px 45px;
 	}
+	#social-icons {
+		padding:0;
+		position: fixed;
+		top: 98%;
+		transform: translateY(-100%);
+		right:0;
+		z-index: 199;
+	}
+	.social-icons li {
+		display: inline-block;
+		margin: 1px 0px;
+	  }
+	.social-icons li a {
+		width:70px;
+		height:70px;
+		line-height:70px;
+		font-size:32px;
+		display:block;
+	}
+	.owl-carousel .owl-item {
+		-webkit-box-align: start;
+		-webkit-align-items: flex-start;
+		-ms-flex-align: start;
+		align-items: flex-start;
+	}
+	.testimonials-section .item {
+		margin: 0;
+	  }
 }
 @media only screen and (max-width: 767px) {
 	#header {
