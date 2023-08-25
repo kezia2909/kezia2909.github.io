@@ -237,6 +237,10 @@
 	#logo {
 		color: #1e1e1e;
 	}
+	a#logo {
+		font-size: 25px;
+		font-weight: 500;
+	  }
 	.navbar-toggle {
 		padding: 0;
 		margin: 0;
@@ -258,7 +262,7 @@
 		padding:0;
 	}
 	.navbar {
-		padding:15px 0;
+		padding:5px 0;
 	}
 	.navbar-toggle:focus {
 		outline:none;
@@ -328,8 +332,12 @@
 		margin-top: 60px;
 		text-align:center;
 	}
+	.testimonial-content {
+		font-size: 16px;
+		padding:20px 5px;
+	}
 	.testimonials-section {
-		padding-top:0;
+		padding-top:10px;
 	}
 	h4 {
 		font-size:18px;
@@ -369,6 +377,18 @@
 	}
 	.social-icons {
 		margin: 0 auto;
+		padding-right: 10px;
+	}
+	.social-icons li {
+		display: inline-block;
+		margin: 0px 0px;
+	  }
+	.social-icons li a {
+		width:50px;
+		height:50px;
+		line-height:50px;
+		font-size:28px;
+		display:block;
 	}
 	.detail-page h1 {
 		margin-bottom: 50px;
@@ -378,6 +398,15 @@
 	}
 	.project-buttons-margin {
 		margin-top: 50px;
+	}
+	.section-inner {
+		padding:10px 10px 0;
+	}
+	.title-block p {
+		/* line-height: 1.5; */
+	}
+	.title-block {
+		margin-bottom:5px;
 	}
 }
 @media only screen and (max-width: 575px) {
