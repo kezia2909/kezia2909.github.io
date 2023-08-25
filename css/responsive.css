@@ -222,6 +222,12 @@
 	  }
 }
 @media only screen and (max-width: 767px) {
+	.wide-col-laptop {
+		top: 0;
+	}
+	.fp-scrollable {
+		height:calc(100vh - 50px) !important;
+	  }
 	#fullpage {
 		z-index: 99;
 		margin-top: 50px;
@@ -434,6 +440,9 @@
 	.owl-carousel .owl-item .client-img img {
 		max-width:65px;
 		margin-right: 10px;
+	}
+	.owl-carousel .owl-dots {
+		margin-top:5px;
 	}
 	.testimonials-section {
 		font-size:13px;
