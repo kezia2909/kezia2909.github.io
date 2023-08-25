@@ -358,11 +358,24 @@
 		font-size:15px;
 	}
 	.about-contentbox {
-		margin-top: 60px;
+		margin-top: 0px;
 		text-align:center;
 	}
-	.testimonial-content {
+	.about-contentbox span{
+		font-size: 18px;
+	}
+	.about-contentbox h2{
+		font-size: 22px;
+	}
+	.about-contentbox p{
 		font-size: 16px;
+	}
+	.about-img {
+		margin: 0 auto 0px;
+		position:relative;
+	  }
+	.testimonial-content {
+		font-size: 1.25em;
 		padding:10px 5px;
 	}
 	.testimonials-section {
@@ -371,7 +384,7 @@
 	.testimonials-section .item h4 {
 		margin-bottom: 10px;
 		padding: 0;
-		font-size: 25px;
+		font-size: 1.5em;
 		text-transform: capitalize;
 		font-weight: 700;
 	}
@@ -452,7 +465,7 @@
 		margin-bottom:5px;
 	}
 	.title-block span{
-		font-size: 20px;
+		font-size: 1.25em;
 	}
 }
 @media only screen and (max-width: 575px) {
