@@ -224,7 +224,7 @@
 @media only screen and (max-width: 767px) {
 	.section{
 		margin-bottom: 50px;
-		background-color: blue;
+		/* background-color: blue; */
 	}
 	.section-inner {
 		padding:0 10px 0;
