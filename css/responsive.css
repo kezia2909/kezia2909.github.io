@@ -222,18 +222,32 @@
 	  }
 }
 @media only screen and (max-width: 767px) {
+	.section{
+		margin-bottom: 50px;
+		background-color: yellow;
+	}
+	.section-inner {
+		padding:0 10px 0;
+	}
 	.wide-col-laptop {
 		top: 0;
 	}
 	.fp-scrollable {
 		margin-top: 50px;
-		height:calc(100vh - 50px) !important;
+		height:calc(100vh - 100px) !important;
 
 	  }
+
+	  .fp-tableCell {
+		display: table-cell;
+		vertical-align: top;
+		width: 100%;
+		height:calc(100vh - 100px) !important;
+	}
 	#fullpage {
 		z-index: 99;
 		margin-top: 50px;
-		height:calc(100vh - 50px) !important;
+		height:calc(100vh - 100px) !important;
 
 	  }
 	#header {
@@ -429,9 +443,7 @@
 	.project-buttons-margin {
 		margin-top: 50px;
 	}
-	.section-inner {
-		padding:0 10px 0;
-	}
+	
 	.title-block p {
 		font-size: 20px;
 		/* line-height: 1.5; */
