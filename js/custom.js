@@ -144,7 +144,7 @@
                 responsive: {
                     0: {
                         items: 1,
-                        margin: 15
+                        // margin: 15
                     },
                     768: {
                         items: 1
