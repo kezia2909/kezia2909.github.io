@@ -391,15 +391,15 @@
 		padding-right: 10px;
 	}
 	.social-icons li {
-		display: inline-block;
+		display: block;
 		margin: 0px 0px;
 	  }
 	.social-icons li a {
-		width:50px;
-		height:50px;
-		line-height:50px;
-		font-size:28px;
-		display:block;
+		width:30px;
+		height:30px;
+		line-height:30px;
+		font-size:20px;
+		display:inline-block;
 	}
 	.detail-page h1 {
 		margin-bottom: 50px;
