@@ -222,7 +222,12 @@
 	  }
 }
 @media only screen and (max-width: 767px) {
+	#fullpage {
+		z-index: 99;
+		margin-top: 50px;
+	  }
 	#header {
+		height: 50px;
 		position: fixed;
 		top: 0;
 		z-index: 6666;
@@ -360,7 +365,7 @@
 		margin-top: 15px;
 	}
 	.content-section {
-		padding:50px 0;
+		padding: bottom 10px;;
 	}
 	.info-inner {
 		margin-top: 20px;
@@ -400,7 +405,7 @@
 		margin-top: 50px;
 	}
 	.section-inner {
-		padding:10px 10px 0;
+		padding:0 10px 0;
 	}
 	.title-block p {
 		/* line-height: 1.5; */
