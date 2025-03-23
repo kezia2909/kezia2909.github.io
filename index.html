@@ -609,50 +609,6 @@ https://templatemo.com/tm-528-elegance
     <script src="js/form.js"></script>
 
     <script src="js/custom.js"></script>
-    
-    <script>
-        console.log("test : ")
-        console.log(getMobileOperatingSystem())
-        getMobileOperatingSystem2()
-        function getMobileOperatingSystem() {
-            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-            // Windows Phone must come first because its UA also contains "Android"
-            if (/windows phone/i.test(userAgent)) {
-                return "Windows Phone";
-            }
-            else if (userAgent.match(/Windows Phone/i))  { return 'WindowsPhone';  }
-
-            if (/android/i.test(userAgent)) {
-                return "Android";
-            }
-
-            // iOS detection from: http://stackoverflow.com/a/9039885/177710
-            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                return "iOS";
-            }
-
-            return "website";
-        }
-        function getMobileOperatingSystem2() {
-            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-            // Windows Phone must come first because its UA also contains "Android"
-            if (/windows phone/i.test(userAgent)) {
-                return "Windows Phone";
-            }
-
-            if (/android/i.test(userAgent)) {
-                window.location = "https://play.google.com/store/apps/details?id=com.interactive.qrisid&hl=id&pli=1"
-            }
-
-            // iOS detection from: http://stackoverflow.com/a/9039885/177710
-            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                window.location = "https://apps.apple.com/id/app/qris-online/id1645228005"
-            }
-
-        }
-    </script>
 
   </body>
 </html>
