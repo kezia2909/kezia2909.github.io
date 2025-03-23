@@ -20,6 +20,27 @@
             background-attachment: fixed;
         }
 
+        #content {
+            display: none;
+        }
+
+        .progress-container {
+            width: 80%;
+            margin: 50px auto;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background: lightgray;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background: green;
+            transition: width 0.2s ease-in-out;
+        }
 
         .container {
             max-width: 900px;
@@ -71,8 +92,18 @@
 </head>
 
 <body>
+    <h2 class="loading-text">Loading... 0%</h2>
+    <div class="progress-container">
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+    </div>
+
     <!-- Start Button -->
-    <button id="start-btn" class="btn btn-primary">Start</button>
+    <button id="start-btn" class="btn btn-primary hidden" onclick=startStory()>Start</button>
+
+
+
 
     <!-- Background Music -->
     <audio id="bg-music" loop>
@@ -280,7 +311,7 @@
                 </div>
             </div>
             <div class="row story-section mt-2">
-                <div class="col-7 mx-auto">
+                <div class="col-4 mx-auto">
                     <img src="./images/7/1.jpg" class="img-fluid w-100" alt="Love You">
                 </div>
             </div>
@@ -293,8 +324,8 @@
                 </div>
             </div> 
             <div class="row story-section mt-2">
-                <div class="col-7 mx-auto">
-                    <img src="./images/74.jpg" class="img-fluid w-100" alt="Love You">
+                <div class="col-6 mx-auto">
+                    <img src="./images/7/4.jpg" class="img-fluid w-100" alt="Love You">
                 </div>
             </div> 
 
@@ -576,7 +607,7 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script>
+    <!-- <script>
         document.getElementById("start-btn").addEventListener("click", function () {
             var audio = document.getElementById("bg-music");
             var content = document.getElementById("content");
@@ -603,6 +634,124 @@
                     sections[index].scrollIntoView({ behavior: "smooth", block: "center" });
                     index++;
                     setTimeout(showSection, 0);
+                }
+            }
+            showSection();
+        }
+    </script> -->
+
+    <script>
+        const images = [
+            "images/0/00.jpg",
+            "images/0/0.jpg",
+            "images/0/1.jpg",
+            "images/0/2.jpg",
+            "images/1/1.jpg",
+            "images/1/2.jpg",
+            "images/1/3.jpg",
+            "images/2/1.jpg",
+            "images/2/2.jpg",
+            "images/2/3.jpg",
+            "images/2/4.jpg",
+            "images/2/5.jpg",
+            "images/2/6.jpg",
+            "images/3/1.jpg",
+            "images/3/2.jpg",
+            "images/3/3.jpg",
+            "images/4/1.png",
+            "images/4/2.jpg",
+            "images/4/3.jpg",
+            "images/4/4.jpg",
+            "images/4/5.jpg",
+            "images/4/6.jpg",
+            "images/5/1.jpg",
+            "images/5/2.jpg",
+            "images/5/3.jpg",
+            "images/5/4.jpg",
+            "images/6/1.jpg",
+            "images/6/2.jpg",
+            "images/7/1.jpg",
+            "images/7/2.jpg",
+            "images/7/3.jpg",
+            "images/7/4.jpg",
+            "images/8/1.jpg",
+            "images/8/2.jpg",
+            "images/9/1.jpg",
+            "images/9/2.jpg",
+            "images/9/3.jpg",
+            "images/9/4.jpg",
+            // Add more images here
+        ];
+        
+        const audio = document.getElementById("bg-music");
+ 
+        let loadedAssets = 0;
+        const totalAssets = images.length; // Images + Audio
+
+        function updateProgress() {
+            loadedAssets++;
+            let percent = Math.round((loadedAssets / totalAssets) * 100);
+            document.querySelector(".progress-fill").style.width = percent + "%";
+            document.querySelector(".loading-text").innerText = `Loading... ${percent}%`;
+
+
+            if (loadedAssets >= totalAssets) {
+                document.querySelector(".loading-text").innerText = "Loading Complete!";
+                document.getElementById("start-btn").classList.remove("hidden"); // Show Start Button
+            }
+        }
+
+        function preloadAssets() {
+            // Preload images
+            images.forEach(image => {
+                const img = new Image();
+                img.src = image;
+                img.onload = updateProgress;
+            });
+
+            // Preload audio
+            audio.addEventListener("canplaythrough", updateProgress, { once: true });
+        }
+
+        function startStory() {
+            document.querySelector(".progress-container").style.display = "none";
+            document.querySelector(".loading-text").style.display = "none";
+            document.querySelector("#start-btn").style.display = "none";
+            audio.muted = false;
+            audio.play();
+            content.style.display = "block";
+            startStoryAnimation();
+        }
+
+        preloadAssets();
+
+
+        // document.getElementById("start-btn").addEventListener("click", function () {
+        //     var audio = document.getElementById("bg-music");
+        //     var content = document.getElementById("content");
+        //     this.style.display = "none"; // Hide button
+
+        //     // Play audio
+        //     audio.muted = false;
+        //     audio.play().catch(error => console.log("Autoplay blocked:", error));
+
+        //     // Show content
+        //     content.style.display = "block";
+
+        //     // Start animation
+        //     startStoryAnimation();
+        // });
+
+        function startStoryAnimation() {
+            let index = 0;
+            const sections = document.querySelectorAll(".story-section");
+
+            function showSection() {
+                if (index < sections.length) {
+                    sections[index].classList.add("visible");
+                    sections[index].scrollIntoView({ behavior: "smooth", block: "center" });
+                    index++;
+                    setTimeout(showSection, 3000);
                 }
             }
             showSection();
