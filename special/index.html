@@ -91,18 +91,18 @@
         /* Button */
         #start-btn {
             font-size: 20px;
-            padding: 10px 20px;
-            margin-top: 20%;
+            /* padding: 10px 20px; */
+            /* margin-top: 20%; */
             cursor: pointer;
             display: none;
         }
 
-        #rotate-alert {
-        display: none; /* Hidden by default */
-        position: fixed;
-        top: 50%;
+        .rotate-alert {
+        display: block; /* Hidden by default */
+        /* position: fixed;
+        top: 40%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); */
         z-index: 1000;
         text-align: center;
         }
@@ -116,12 +116,12 @@
         text-align: center;
         }
 
-        #rotate-alert img {
-            width: 150px; /* Adjust size as needed */
+        .rotate-alert img {
+            width: 50px; /* Adjust size as needed */
         }
 
         /* Show GIF only in portrait mode */
-        @media screen and (orientation: portrait) {
+        /* @media screen and (orientation: portrait) {
             #rotate-alert {
                 display: block;
             }
@@ -131,7 +131,7 @@
             #rotate-alert {
                 display: none;
             }
-        }
+        } */
 
         .startButton {
             /* display: flex; */
@@ -139,24 +139,32 @@
             align-items: center;
             margin: auto; /* Centers horizontally */
             /* position: absolute; */
-            top: 10%;
-            left: 50%;
+            /* position: fixed; */
+
+            /* top: 20%; */
+            /* left: 50%;
+            transform: translate(-50%, 0); */
+
         }
     </style>
 </head>
 
 <body>
     <h2 class="loading-text">Loading... 0%</h2>
-    <div id="rotate-alert">
-        <img src="./rotate-smartphone.png" width="50%" alt="Rotate your phone"/>
-    </div>
+    
     <div class="progress-container">
         <div class="progress-bar">
             <div class="progress-fill"></div>
         </div>
     </div>
+    <div class="rotate-alert">
+        <img src="./rotate-smartphone.png" width="25%" alt="Rotate your phone"/>
+        <img src="./sound-on.png" width="25%" alt="Turn on your sound"/>
+    </div>
     <!-- Start Button -->
-    <button id="start-btn" class="btn btn-primary startButton" onclick=startStory()>Start</button>
+    <div>
+        <button id="start-btn" class="btn btn-primary startButton mt-3" onclick=startStory()>Start</button>
+    </div>
 
     
     <!-- Background Music -->
@@ -169,13 +177,13 @@
         <div class="timeline" id="timeline">
             <div class="row story-section mt-5">
                 <!-- <div class="row justify-content-center"> -->
-                    <div class="col-md-6 mx-auto">
+                    <div class="col-6 mx-auto">
                         <img src="./images/0/00.jpg" class="img-fluid animated fadeInDown" alt="Steadfast Love">
                     </div>
                 <!-- </div> -->
             
                 <!-- <div class="row justify-content-center"> -->
-                    <div class="col-md-8 mx-auto">
+                    <div class="col-12 mx-auto">
                         <h1 class="mt-4 animated fadeInUp">25 Years of Steadfast Love</h1>
                     </div>
                 <!-- </div> -->
@@ -1142,6 +1150,7 @@
             document.querySelector(".progress-container").style.display = "none";
             document.querySelector(".loading-text").style.display = "none";
             document.querySelector(".startButton").style.display = "none";
+            document.querySelector(".rotate-alert").style.display = "none";
             audio.muted = false;
             audio.play();
             content.style.display = "block";
