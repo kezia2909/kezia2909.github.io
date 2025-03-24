@@ -25,8 +25,8 @@
         }
 
         .progress-container {
-            width: 80%;
-            margin: 50px auto;
+            width: 100%;
+            margin: 20px auto;
         }
         .progress-bar {
             width: 100%;
@@ -96,20 +96,69 @@
             cursor: pointer;
             display: none;
         }
+
+        #rotate-alert {
+        display: none; /* Hidden by default */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+        text-align: center;
+        }
+
+        .opening {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+        text-align: center;
+        }
+
+        #rotate-alert img {
+            width: 150px; /* Adjust size as needed */
+        }
+
+        /* Show GIF only in portrait mode */
+        @media screen and (orientation: portrait) {
+            #rotate-alert {
+                display: block;
+            }
+        }
+
+        @media screen and (orientation: landscape) {
+            #rotate-alert {
+                display: none;
+            }
+        }
+
+        .startButton {
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            margin: auto; /* Centers horizontally */
+            /* position: absolute; */
+            top: 10%;
+            left: 50%;
+        }
     </style>
 </head>
 
 <body>
     <h2 class="loading-text">Loading... 0%</h2>
+    <div id="rotate-alert">
+        <img src="./rotate-smartphone.png" width="50%" alt="Rotate your phone"/>
+    </div>
     <div class="progress-container">
         <div class="progress-bar">
             <div class="progress-fill"></div>
         </div>
     </div>
-
     <!-- Start Button -->
     <button id="start-btn" class="btn btn-primary startButton" onclick=startStory()>Start</button>
 
+    
     <!-- Background Music -->
     <audio id="bg-music" loop>
         <source src="./bg_music.mp3" type="audio/mpeg">
